@@ -1,0 +1,75 @@
+.new-header-top-actions-account .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+  background-color: #fff;
+  max-height: 500px;
+  width: 200px;
+}
+
+.new-header-top-actions-account:hover .dropdown-menu {
+  display: block;
+}
+
+.new-header-top-actions-account .swal-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.swal-button-container {
+  margin-bottom: 0.5rem;
+}
+
+.swal-button-container:last-child {
+  margin-bottom: 0;
+}
+
+.swal-text {
+  font-size: 1rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+.swal-button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.swal-button--register {
+  margin-top: 10px;
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+
+.swal-button--login {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+.swal-content {
+  padding: 20px; /* Đặt padding cho nội dung */
+  background-color: #fff; /* Màu nền cho nội dung */
+  border-radius: 8px; /* Bo góc cho nội dung */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiển thị shadow cho nội dung */
+}
+
+/* Thiết lập kích thước và căn giữa ảnh */
+.swal-content img {
+  max-width: 70%; /* Ảnh sẽ không vượt quá phần tử chứa */
+  display: block; /* Đảm bảo ảnh căn giữa */
+  margin: 0 auto; /* Căn giữa ảnh */
+}
+.fa{
+    color: black;
+    font-size: 20px;
+}
+.fas{
+    color: black;
+    font-size: 20px;
+}

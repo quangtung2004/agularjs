@@ -1,0 +1,8 @@
+footer .btn-floating {
+    color: #000;
+    transition: color 0.3s;
+}
+
+footer .btn-floating:hover {
+    color: #007bff;
+}

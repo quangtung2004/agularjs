@@ -1,0 +1,118 @@
+@if(product){
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img src="{{product.image}}" alt="Product Image" width="60%" class="product-image">
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6 product-info">
+            <h1 class="product-title">{{product.title}}</h1>
+            <p class="product-description">{{product.description}}</p>
+            <div class="product d-flex align-items-center">
+                <button class="price-new btn">
+                    <h4 class="product-price">${{product.pricenew}}</h4>
+                </button>
+                <div class="price-del"><del class="product-price">${{product.priceold}}</del></div>
+            </div>
+            <div class="product-rating mb-3">
+                <div class="crop" [style.width.px]="product.starRating*90/5" title="rating">
+                    <div style="width: 500px">
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="quantity-input mb-3">
+                <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity()">-</button>
+                <input type="text" class="btn" id="quantity" value="1">
+                <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity()">+</button>
+            </div>
+            <button class="btn btn-primary btn-lg">Add to Cart</button>
+            <div class="bid-section">
+                <h4>Place a Bid</h4>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter your bid" aria-label="Bid Amount">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Submit Bid</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Product Description -->
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Product Description</h3>
+            <p>{{product.description}}</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Related Products -->
+    <div class="row related-products">
+        <div class="col-md-12">
+            <h3>Related Products</h3>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Related Product">
+                <div class="card-body">
+                    <h5 class="card-title">Related Product 1</h5>
+                    <p class="card-text">$49.99</p>
+                    <a href="#" class="btn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Related Product">
+                <div class="card-body">
+                    <h5 class="card-title">Related Product 2</h5>
+                    <p class="card-text">$59.99</p>
+                    <a href="#" class="btn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Related Product">
+                <div class="card-body">
+                    <h5 class="card-title">Related Product 3</h5>
+                    <p class="card-text">$69.99</p>
+                    <a href="#" class="btn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card">
+                <img src="https://via.placeholder.com/250" class="card-img-top" alt="Related Product">
+                <div class="card-body">
+                    <h5 class="card-title">Related Product 4</h5>
+                    <p class="card-text">$79.99</p>
+                    <a href="#" class="btn btn-primary">View Product</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}@else{
+<div class="container">
+    <h1>404</h1>
+    <p>Oops! The page you are looking for does not exist.</p>
+    <p>It might have been moved or deleted.</p>
+    <a href="/" class="back-home">Go to Homepage</a>
+</div>
+}

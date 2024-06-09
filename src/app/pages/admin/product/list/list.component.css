@@ -1,0 +1,60 @@
+.btn-success {
+    background-color: rgb(26, 168, 26);
+  }
+  .btn-primary {
+    background-color: rgb(44, 157, 250);
+  }
+  .btn-danger {
+    background-color: red;
+  }
+  .btn {
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+  
+  a:hover {
+    color: #0056b3;
+    border-bottom: 1px solid #0056b3;
+  }
+  .back-home {
+    margin-top: 2em;
+    display: inline-block;
+    padding: 0.5em 1.5em;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .back-home:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  .flex {
+    margin: 10px;
+  }
+  .crop {
+    overflow: hidden;
+  }
+  .crop div {
+    display: flex;
+    flex-direction: row;
+  }
+  .crop .fa {
+    color: gold;
+  }
+  .product{
+      width: 200px;
+      max-width: 150px;
+  }
+  .products{
+      width: 250px;
+      max-width: 250px;
+  }

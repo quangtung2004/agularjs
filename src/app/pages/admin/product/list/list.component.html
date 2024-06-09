@@ -1,0 +1,57 @@
+<div class="container">
+ 
+    <h1>Danh Sách Sản Phẩm Admin</h1>
+    <div class="d-flex justify-content-between mb-3">
+        <button class="btn btn-success" [routerLink]="'/admin/products/create'">Create Product</button>
+        <div class="flex">
+            <input type="text" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 form-control" placeholder="Search..."
+                [(ngModel)]='filterValue' (input)='filter()'>
+
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price New</th>
+                <th>Price Old</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Star Rating</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        @for(product of products; track product.id){
+        <tbody>
+            <td class="products">{{product.id}}</td>
+            <td class="product">{{product.title}}</td>
+            <td class="product">{{product.pricenew}}</td>
+            <td class="product">{{product.priceold}}</td>
+            <td class="product">{{product.description}}</td>
+            <td class="product"><img src="{{product.image}}" width="90px" height="90px" alt=""></td>
+            <td class="product"><div class="crop" [style.width.px]="product.starRating * 90 / 5" title="rating">
+                <div style="width: 500px">
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div></td>
+            <td class="product">
+                <button class="btn btn-success" [routerLink]="['/products', product.id]">View</button>
+                <button class="btn btn-primary" [routerLink]="['/admin/products/edit',product.id]">Sửa</button>
+                <button (click)="handleDeleteProduct(product.id)" class="btn btn-danger">Xóa</button>
+            </td>
+            
+        </tbody>
+        }@empty{
+        <div class="container">
+            <h1>Sản phẩm này không có</h1>
+            <p>Oops! The page you are looking for does not exist.</p>
+            <p>It might have been moved or deleted.</p>
+        </div>
+        }
+    </table>
+</div>
