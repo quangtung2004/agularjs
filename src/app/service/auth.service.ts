@@ -11,7 +11,7 @@ export class AuthService {
   apiUrl = 'http://localhost:3000';
   http = inject(HttpClient);
 
-  private loggedIn = new BehaviorSubject<boolean>(this.hasToken());
+  private loggedIn = new BehaviorSubject<boolean>(false);
 
   register(data: RegisterForm) {
     return this.http.post(`${this.apiUrl}/register`, data);
@@ -19,23 +19,21 @@ export class AuthService {
 
   login(data: LoginForm) {
     return this.http.post(`${this.apiUrl}/login`, data).pipe(
-      tap((response: any) => {
-        sessionStorage.setItem('user', JSON.stringify(response.user));
+      tap(() => {
         this.loggedIn.next(true);
+        sessionStorage.setItem('loggedIn', 'true');
       })
     );
   }
 
   logout(): void {
-    sessionStorage.removeItem('user');
     this.loggedIn.next(false);
+    sessionStorage.removeItem('loggedIn');
   }
 
   get isLoggedIn(): Observable<boolean> {
+    const loggedIn = sessionStorage.getItem('loggedIn') === 'true';
+    this.loggedIn.next(loggedIn);
     return this.loggedIn.asObservable();
-  }
-
-  private hasToken(): boolean {
-    return !!sessionStorage.getItem('user');
   }
 }

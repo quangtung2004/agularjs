@@ -8,15 +8,22 @@ import { ProductCreateComponent } from './pages/admin/product/create/create.comp
 import { ProductEditComponent } from './pages/admin/product/edit/edit.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthguardService } from './service/authguard.service';
+import { ListuserComponent } from './pages/admin/product/listuser/listuser.component';
 
 export const routes: Routes = [
   {
     path: 'admin',
     component: AdminLayoutComponent,
+    canActivate: [AuthguardService],
     children: [
       {
         path: 'products/list',
         component: ProductListComponent,
+      },
+      {
+        path: 'products/listuser',
+        component: ListuserComponent,
       },
       {
         path: 'products/create',

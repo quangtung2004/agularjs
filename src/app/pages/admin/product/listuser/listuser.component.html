@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Danh Sách Người dùng</h1>
+    <div class="d-flex justify-content-between mb-3">
+        
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let user of alluser">
+                <td>{{ user.email }}</td>
+                <td>{{ user.password }}</td>
+            </tr>
+        </tbody>
+    
+    </table>
+</div>
