@@ -139,6 +139,16 @@
       "email": "tungcqph32093@fpt.edu.vn",
       "password": "$2a$10$oNvJX5hiyEOar2NB8ZvvSuVTMJ4sejslWHKGK5MxluFQr0v3IpQVm",
       "id": 3
+    },
+    {
+      "email": "chuquangtung@gmail.com",
+      "password": "$2a$10$oznSaqdB9kzLu5ylO0I8FeyACpts0RKJH1EYng.WEsjK5UWpwTJp2",
+      "id": 4
+    },
+    {
+      "email": "chuquangtung2k4vl@gmail.com",
+      "password": "$2a$10$sA9upgAqQuaw9pYFXdxROO0geQ435JgXHeFAqWkEEp0ENR1MB7un.",
+      "id": 5
     }
   ]
 }
